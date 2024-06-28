@@ -1,0 +1,319 @@
+/* 구글폰트 가져오기 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+/* 본문폰트 설정 */
+body{
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 16px; 
+    font-weight: 400;
+    line-height: 1.5; 
+    color: #292a2b;
+}
+
+/* 여백제거 */
+body, h1, h2, h3, h4, h5, h6, ol, ul, li, dl, dt, dd, p, button{
+    margin: 0; padding: 0;
+}
+
+/* 리스트 블릿 제거 */
+ol, ul{
+    list-style: none;
+}
+
+/* 링크 텍스트 밑줄 제거 텍스트 색상지정 */
+a{
+    text-decoration: none; 
+    color: #292a2b;
+}
+
+/* 이미지 하단에 생기는 여백 제거 */
+img{
+    vertical-align: middle;
+}
+
+/* normal */
+address{
+    font-style: normal;
+}
+
+/*  보더 제거 */
+img{
+    border: none
+}
+button{
+    border: none;
+}
+
+/* 커서 포인터 */
+button{
+    cursor: pointer;
+}
+
+/* 공통클래스 */
+.inner{
+    width: 1170px; 
+    margin: 0 auto;
+    position: relative;
+}
+.inner::after{
+    content: ""; 
+    display: block; 
+    clear: both;
+}
+p{
+    font-weight: 500;
+}
+
+/* 섹션공통 */
+.sec .tit-box{
+    text-align: center; 
+    margin-bottom: 100px;
+}
+.sec .tit-box h2{
+    font-size: 45px; 
+    line-height: 1; 
+    font-weight: 700;
+}
+
+/* 헤더영역 */
+#header h1{
+    float: left; 
+    margin-top: 23px;
+}
+#header h1 a{
+    display: block;
+}
+
+#header nav{
+    float: left;
+}
+#header #gnb{
+    margin-left: 100px; 
+    overflow: hidden;
+}
+
+#header #gnb li{
+    float: left;
+}
+#header #gnb li a{
+    display: block;
+    line-height: 140px; 
+    padding: 0 40px;
+    font-size: 20px; 
+    font-weight: 500;
+    position: relative;
+}
+#header #gnb li a:hover{
+    color: salmon;
+}
+#header #gnb li a::after{
+    content: ""; 
+    position: absolute;
+    left: 50%; 
+    bottom: 0; 
+    transform: translate(-50%);
+    width: 0; 
+    height: 4px;
+    background: salmon;
+    transition: width 0.3s ease-out;
+}
+#header #gnb li a:hover::after{
+    width: calc(100% - 80px);
+}
+
+#header .btn-open{
+    display: none;
+}
+
+/* 메인비주얼영역 */
+#mainSlide .swiper-slide{
+    position: relative;
+}
+#mainSlide img{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+#mainSlide .container{
+    width: 1170px;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+#mainSlide .container .txt-wrap{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#mainSlide .txt-wrap .tit{
+    font-size: 48px;
+    line-height: 1em;
+    margin-bottom: 10px;
+}
+#mainSlide .txt-wrap .tit span{
+    color: #FF4583;
+    line-height: 1em;
+}
+
+#mainSlide .txt-wrap .sub-tit{
+    font-size: 21px;
+    color: #4D5256;
+    margin-bottom: 22px;
+}
+#mainSlide .txt-wrap .cont{
+    font-size: 30px;
+    line-height: 1.3em;
+    color: #4D5256;
+}
+
+/* 섹션1영역 */
+#sec-1{
+    padding: 160px 0;
+}
+
+#sec-1 .tit-box p{
+    font-size: 26px;
+    line-height: 1;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+#sec-1 .img-list::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+#sec-1 .img-list .item{
+    width: 270px;
+    height: 440px;
+    float: left;
+    text-indent: -9999px;
+    border: 5px solid rgba(255, 109, 118, 0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    margin-bottom: 70px;
+}
+#sec-1 .img-list .item:hover{
+    background-position-y: -20px;
+    border: 5px solid rgba(255, 109, 118, 1);
+    box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.25);
+}
+
+#sec-1 .img-list .item+.item{
+    margin-left: 30px;
+}
+
+#sec-1 .img-list .item1{
+    background-image: url(../images/sec1-img1.png);
+}
+#sec-1 .img-list .item2{
+    background-image: url(../images/sec1-img2.png);
+}
+#sec-1 .img-list .item3{
+    background-image: url(../images/sec1-img3.png);
+}
+#sec-1 .img-list .item4{
+    background-image: url(../images/sec1-img4.png);
+}
+
+#sec-1 .inner > p{
+    text-align: center;
+}
+#sec-1 .inner > p::before{
+    content: "응모방법";
+    display: inline-block;
+    padding: 10px;
+    background-color: #CED3D6;
+    font-size: 22px;
+    line-height: 1;
+}
+#sec-1 .inner > p span{
+    display: inline-block;
+    padding: 10px;
+    margin-left: 10px;
+    font-size: 22px;
+    line-height: 1;
+}
+
+#sec-1 .btn-wrap{
+    text-align: center;
+    margin-top: 70px;
+}
+#sec-1 .btn-wrap .btn{
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 80px;
+    width: 280px;
+    color: #fff;
+    background-color: #000;
+    border-radius: 40px;
+}
+
+/* 섹션2영역 */
+#sec-2{
+    padding: 160px 0;
+}
+#sec-2 .list-wrap{
+    text-align: center;
+    border: 1px solid #A9AFB3;
+    border-radius: 30px;
+    padding: 80px 0;
+    margin-top: 100px; 
+}
+#sec-2 .list-wrap .img-list{
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+#sec-2 .list-wrap .img-list::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+#sec-2 .list-wrap .img-list li{
+    width: 220px;
+    float: left;
+}
+#sec-2 .list-wrap .img-list li + li{
+    margin-left: 42px;
+}
+
+/* 푸터영역 */
+#footer{
+    background: #F1F5F5;
+    height: 270px;
+}
+#footer .inner{
+    padding-top: 30px;
+}
+#footer .foot-logo{
+    float: left;
+}
+
+#footer .foot-info{
+    float: left;
+    margin-left: 100px;
+}
+
+#footer .foot-sns{
+    position: absolute; right: 0; top: 30px;
+}
+#footer .foot-sns a{
+    display: inline-block;
+    width: 24px; height: 24px;
+    text-indent: -9999px;
+}
+#footer .foot-sns .ico-f{
+    background: url(../images/ico-fb.png) no-repeat;
+}
+#footer .foot-sns .ico-y{
+    background: url(../images/ico-yt.png) no-repeat;
+    margin-left: 20px;
+}
